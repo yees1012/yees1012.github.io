@@ -1,20 +1,16 @@
 ---
-title: Hello World yees
-description: Welcome to Hugo Theme Stack
+title: Welcome!
+description: Yees の BLOG
 slug: hello-world
-date: 2022-03-06 00:00:00+0000
-image: cover.jpg
-categories:
-    - Example Category
-tags:
-    - Example Tag
+date: 2025-04-16 04:19:00+0000
+image: cafe-road.jpg
 weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 
-Welcome to Hugo theme Stack. This is your first post. Edit or delete it, then start writing!
+欢迎来到我的博客，我会在博客中记录一些学习笔记、学习过程中遇到的bug以及解决方法、一些读后感... 
 
-For more information about this theme, check the documentation: https://stack.jimmycai.com/
+当然，我也会记录一些生活中值得记录的瞬间 ~
 
-Want a site like this? Check out [hugo-theme-stack-stater](https://github.com/CaiJimmy/hugo-theme-stack-starter)
+博客刚刚创建不久，所以暂时不会开通评论功能，大家如果有什么想和我分享的可以通过小红书找到我：`8075894904`
 
-> Photo by [Pawel Czerwinski](https://unsplash.com/@pawel_czerwinski) on [Unsplash](https://unsplash.com/)
+> 该博客是通过hugo创建：[hugo-theme-stack-stater](https://github.com/CaiJimmy/hugo-theme-stack-starter)
