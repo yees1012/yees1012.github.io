@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Setup on YEES</title><link>https://yees.com/categories/setup/</link><description>Recent content in Setup on YEES</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 21 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yees.com/categories/setup/index.xml" rel="self" type="application/rss+xml"/><item><title>Tomcat 配置流程</title><link>https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/</link><pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate><guid>https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/</guid><description>&lt;h1 id="tomcat-配置流程">Tomcat 配置流程
+&lt;/h1>&lt;blockquote>
+&lt;p>IDEA 2023&lt;/p>&lt;/blockquote>
+&lt;h2 id="下载-tomcat">下载 Tomcat
+&lt;/h2>&lt;p>&lt;code>https://tomcat.apache.org/download-90.cgi&lt;/code> - Core64-bit Windows zip&lt;/p>
+&lt;h2 id="环境变量的配置">环境变量的配置
+&lt;/h2>&lt;p>配置环境变量：&lt;code>CATALINA_HOME&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-12.png"
+width="748"
+height="219"
+srcset="https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-12_hu_63102403aad950a.png 480w, https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-12_hu_84bd25a1e5acf99e.png 1024w"
+loading="lazy"
+alt="CATALINA_HOME"
+class="gallery-image"
+data-flex-grow="341"
+data-flex-basis="819px"
+>&lt;/p>
+&lt;p>然后找到 &lt;code>Path&lt;/code> 双击，然后 &lt;code>New&lt;/code> 添加 &lt;code>%CATALINA_HOME%\bin&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-13.png"
+width="680"
+height="315"
+srcset="https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-13_hu_c4b19ad8a7fd6a76.png 480w, https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-13_hu_caf2b73f89609cc3.png 1024w"
+loading="lazy"
+alt="%CATALINA_HOME%\bin"
+class="gallery-image"
+data-flex-grow="215"
+data-flex-basis="518px"
+>&lt;/p>
+&lt;h2 id="idea-中的配置">IDEA 中的配置
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>创建新项目&lt;/p>
+&lt;blockquote>
+&lt;p>Name：填写项目名称
+Location：选择项目存放位置
+JDK：选择项目的 JDK 版本
+点击 &lt;code>Create&lt;/code> 创建项目&lt;/p>&lt;/blockquote>
+&lt;p>&lt;img src="https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image.png"
+width="984"
+height="766"
+srcset="https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image_hu_73a5025eae8c1271.png 480w, https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image_hu_64858650330f2058.png 1024w"
+loading="lazy"
+alt="Create"
+class="gallery-image"
+data-flex-grow="128"
+data-flex-basis="308px"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>打开 Add Framework Support 界面&lt;/p>
+&lt;blockquote>
+&lt;p>快捷键 &lt;code>Shift&lt;/code> + &lt;code>Shift&lt;/code> 打开搜索界面，勾上右上角的 &lt;code>Include non-project items&lt;/code> ，搜索 &lt;code>Add Framework Support&lt;/code>&lt;/p>&lt;/blockquote>
+&lt;p>&lt;img src="https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-1.png"
+width="842"
+height="872"
+srcset="https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-1_hu_cb34d8aa6138e22f.png 480w, https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-1_hu_da1eb8e028a3748e.png 1024w"
+loading="lazy"
+alt="Add Framework Support"
+class="gallery-image"
+data-flex-grow="96"
+data-flex-basis="231px"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>添加 Web 应用&lt;/p>
+&lt;blockquote>
+&lt;p>勾上 &lt;code>Web Application&lt;/code>，然后勾上 &lt;code>Create web.xml&lt;/code>，最后点击 &lt;code>OK&lt;/code>&lt;/p>&lt;/blockquote>
+&lt;p>&lt;img src="https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-2.png"
+width="795"
+height="843"
+srcset="https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-2_hu_ce32cb2fadf59742.png 480w, https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-2_hu_e18722658facbf59.png 1024w"
+loading="lazy"
+alt="Web Application"
+class="gallery-image"
+data-flex-grow="94"
+data-flex-basis="226px"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Edit Configuration&lt;/p>
+&lt;blockquote>
+&lt;p>点击右上角的 &lt;code>Current File&lt;/code>，选择 &lt;code>Edit Configuration&lt;/code>&lt;/p>&lt;/blockquote>
+&lt;p>&lt;img src="https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-7.png"
+width="782"
+height="304"
+srcset="https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-7_hu_e7a6baa1aa289a49.png 480w, https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-7_hu_db259729dcac753a.png 1024w"
+loading="lazy"
+alt="Edit Configuration"
+class="gallery-image"
+data-flex-grow="257"
+data-flex-basis="617px"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>配置 Tomcat&lt;/p>
+&lt;blockquote>
+&lt;p>点击左上角的 &lt;code>+&lt;/code> 号，找到 &lt;code>Tomcat Server&lt;/code> 下的 &lt;code>Local&lt;/code>&lt;/p>&lt;/blockquote>
+&lt;p>&lt;img src="https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-3.png"
+width="1317"
+height="866"
+srcset="https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-3_hu_e47b10199525df32.png 480w, https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-3_hu_a8466014c754178d.png 1024w"
+loading="lazy"
+alt="Tomcat Server"
+class="gallery-image"
+data-flex-grow="152"
+data-flex-basis="364px"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Server 板块的设置&lt;/p>
+&lt;blockquote>
+&lt;p>在 &lt;code>Open browser&lt;/code> 下面有一个可以选择 &lt;code>After launch&lt;/code> 默认打开的浏览器，选择自己要使用的浏览器&lt;/p>&lt;/blockquote>
+&lt;p>&lt;img src="https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-4.png"
+width="1309"
+height="916"
+srcset="https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-4_hu_5ed548ef4e8da703.png 480w, https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-4_hu_f87cd5d89d31493a.png 1024w"
+loading="lazy"
+alt="Server"
+class="gallery-image"
+data-flex-grow="142"
+data-flex-basis="342px"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Deployment 板块的设置&lt;/p>
+&lt;blockquote>
+&lt;p>点击左上角的 &lt;code>+&lt;/code> 号，选择 &lt;code>Artifact...&lt;/code>&lt;/p>&lt;/blockquote>
+&lt;p>&lt;img src="https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-6.png"
+width="1315"
+height="911"
+srcset="https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-6_hu_2fd0a2c4cf216f4.png 480w, https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-6_hu_b110d7bd07c06dac.png 1024w"
+loading="lazy"
+alt="Deployment"
+class="gallery-image"
+data-flex-grow="144"
+data-flex-basis="346px"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>设置默认路径&lt;/p>
+&lt;blockquote>
+&lt;p>在下方的 &lt;code>Application context&lt;/code> 可以设置默认路径，每次要打开我们的网页的根路径就是这个。然后点击 &lt;code>Apply&lt;/code> ， &lt;code>OK&lt;/code>&lt;/p>&lt;/blockquote>
+&lt;p>&lt;img src="https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-5.png"
+width="1313"
+height="961"
+srcset="https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-5_hu_799f0161d2cdd940.png 480w, https://yees.com/p/tomcat-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B/image-5_hu_499af135bce2c75f.png 1024w"
+loading="lazy"
+alt="Application context"
+class="gallery-image"
+data-flex-grow="136"
+data-flex-basis="327px"
+>&lt;/p>
+&lt;/li>
+&lt;/ol></description></item><item><title>配置环境变量</title><link>https://yees.com/p/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</link><pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate><guid>https://yees.com/p/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</guid><description>&lt;ol>
+&lt;li>
+&lt;p>settings 搜索 variable，选择 &lt;code>Edit the system environment variables&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://yees.com/p/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/image-8.png"
+width="515"
+height="443"
+srcset="https://yees.com/p/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/image-8_hu_6ac2f0246953e580.png 480w, https://yees.com/p/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/image-8_hu_42a48f30164260f3.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="116"
+data-flex-basis="279px"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>点击 &lt;code>Environment Variables&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://yees.com/p/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/image-9.png"
+width="544"
+height="572"
+srcset="https://yees.com/p/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/image-9_hu_256709dd39023a6f.png 480w, https://yees.com/p/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/image-9_hu_f37e6dcc3048d312.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="95"
+data-flex-basis="228px"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>点击 &lt;code>New&lt;/code> 添加环境变量，然后点击 &lt;code>OK&lt;/code> ， &lt;code>Apply&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://yees.com/p/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/image-10.png"
+width="690"
+height="319"
+srcset="https://yees.com/p/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/image-10_hu_77f15c2b1546f83e.png 480w, https://yees.com/p/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/image-10_hu_ff30e74b5f6f510e.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="216"
+data-flex-basis="519px"
+>&lt;/p>
+&lt;p>&lt;img src="https://yees.com/p/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/image-11.png"
+width="746"
+height="215"
+srcset="https://yees.com/p/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/image-11_hu_b1e54dd147ce31e7.png 480w, https://yees.com/p/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/image-11_hu_c01cb6f0c47baa89.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="346"
+data-flex-basis="832px"
+>&lt;/p>
+&lt;/li>
+&lt;/ol></description></item></channel></rss>
