@@ -7,8 +7,6 @@ categories:
     - setup
 ---
 
-# 配置环境变量
-
 1. settings 搜索 variable，选择 `Edit the system environment variables`
    
    ![alt text](image-8.png)

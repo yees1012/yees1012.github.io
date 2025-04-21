@@ -1,7 +1,7 @@
 ---
 title: Setup
 description: Setup step.
-image:
+image: moon.jpg
 
 # Badge style
 style:
