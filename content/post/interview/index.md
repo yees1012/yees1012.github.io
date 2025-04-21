@@ -3,7 +3,6 @@ title: Hello, Java
 date: 2025-04-16
 description: Introduction of Java
 tags: 
-    - java
 categories:
     - java
 ---
